@@ -10,14 +10,13 @@ jobs:
       run: brew install dpkg create-dmg
     - name: make test
       run: make
-    - name: upload artifact ipa
+    - name: upload artifact 
       uses: actions/upload-artifact@v4.0.0
       with:
-       path: App/*ipa
-    - name: upload artifact dmg
-      uses: actions/upload-artifact@v4.0.0
-      with:
-       path: App/*dmg
-      
+       name: AnimeNow
+       path: |
+        App/*ipa
+        App/*dmg
+     
       
       
