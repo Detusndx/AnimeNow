@@ -1,0 +1,11 @@
+name: build-ios
+
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - name: install packages
+      run: brew install dpkg
+    - name: make test
+      run: make ios-build
