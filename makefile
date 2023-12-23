@@ -17,7 +17,7 @@ ios-build:
         DEBUG_INFORMATION_FORMAT=dwarf-with-dsym | xcbeautify
 	mkdir -p "./App/Payload"
 	cd App && mv "./Anime Now! (iOS).xcarchive/Products/Applications/Anime Now!.app" "./Payload/Anime Now!.app"
-        ldid -S "./Payload/Anime Now!.app/Anime Now!"
+        cd App && ldid -S "./Payload/Anime Now!.app/Anime Now!"
 	cd App && zip -r "./Anime Now! (iOS).ipa" './Payload'
 	cd App && tar -czf 'Anime Now! (iOS) Symbols.tar.gz' -C './Anime Now! (iOS).xcarchive' 'dSYMs'
 
