@@ -8,4 +8,4 @@ jobs:
     - name: install packages
       run: brew install dpkg
     - name: make test
-      run: make ios-build
+      run: make
